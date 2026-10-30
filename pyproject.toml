@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "runtfy"
+version = "0.1.0"
+description = "A CLI tool that wraps terminal commands and notifies your phone when they finish or need input."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Adil", email = "adilkt16@users.noreply.github.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+]
+dependencies = [
+    "tomli>=2.0.0; python_version < '3.11'",
+]
+
+[project.urls]
+Homepage = "https://github.com/adilkt16/runtfy"
+Repository = "https://github.com/adilkt16/runtfy"
+"Bug Tracker" = "https://github.com/adilkt16/runtfy/issues"
+Changelog = "https://github.com/adilkt16/runtfy/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[project.scripts]
+runtfy = "runtfy.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
